@@ -1,4 +1,4 @@
 #!/bin/bash
 filename="$(date +%d-%b-flameshot)-$RANDOM.png"
-flameshot gui -r > ~/dox/pics/$filename
-curl -H "Content-Type: multipart/form-data" -H "embed: true" -H "authorization: yourtoken" -F file="@/home/neb/dox/pics/$filename" https://i.neb.cx/api/upload | jq -r '.files | .[]' | tr -d '\n' | xsel -b
+gnome-screenshot -a -f /home/neb/Pictures/$filename
+curl -H "Content-Type: multipart/form-data" -H "embed: true" -H "authorization: yourtoken" -F file="@/home/neb/Pictures/$filename" https://i.neb.cx/api/upload | jq -r '.files | .[]' | tr -d '\n' | xsel -ib
