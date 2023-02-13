@@ -4,4 +4,4 @@ flameshot gui -p $HOME/dox/pics/$filename
 curl -H "Content-Type: multipart/form-data" -H "embed: true" -H "authorization: yourtoken" -F file="@$HOME/dox/pics/$filename" https://i.neb.cx/api/upload | jq -r '.files | .[]' | tr -d '\n' | xsel -ib
 
 # If you would like to use imgur and not a zipline host, you don't need the last two lines and you can just use:
-# flameshot gui -p $HOME/dox/pics/$filename -u -c (replace flatpak command with flameshot if you are not using flatpak)
+# flameshot gui -p $HOME/dox/pics/$filename -u -c
